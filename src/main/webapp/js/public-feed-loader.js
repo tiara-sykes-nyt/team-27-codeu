@@ -1,6 +1,5 @@
 /**
  * Adds a public feed link to the page
- * @author: Khanh Ngo
  */
 function fetchMessages(){
     const url = '/feed';
