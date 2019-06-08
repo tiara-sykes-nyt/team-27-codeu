@@ -79,14 +79,14 @@ function showMessageFormIfViewingSelf() {
     headerDiv.appendChild(document.createTextNode(
       message.user + ' - ' + new Date(message.timestamp)));
 
-      const bodyDiv = document.createElement('div');
-      bodyDiv.classList.add('message-body');
-      bodyDiv.innerHTML = message.text;
+    const bodyDiv = document.createElement('div');
+    bodyDiv.classList.add('message-body');
+    bodyDiv.innerHTML = message.text;
 
-      const messageDiv = document.createElement('div');
-      messageDiv.classList.add('message-div');
-      messageDiv.appendChild(headerDiv);
-      messageDiv.appendChild(bodyDiv);
+    const messageDiv = document.createElement('div');
+    messageDiv.classList.add('message-div');
+    messageDiv.appendChild(headerDiv);
+    messageDiv.appendChild(bodyDiv);
 
       return messageDiv;
     }
