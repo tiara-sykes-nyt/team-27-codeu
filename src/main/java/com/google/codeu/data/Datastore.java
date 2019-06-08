@@ -57,7 +57,6 @@ public class Datastore {
   *     message. List is sorted by time descending.
   */
   public List<Message> getMessages(String user) {
-    List<Message> messages = new ArrayList<>();
     Query query = new Query("Message")
             .setFilter(new Query.FilterPredicate("user", FilterOperator.EQUAL, user))
             .addSort("timestamp", SortDirection.DESCENDING);
