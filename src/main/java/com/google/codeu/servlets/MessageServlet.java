@@ -16,19 +16,27 @@
 
 package com.google.codeu.servlets;
 
+import java.io.IOException;
+import java.util.List;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import com.google.appengine.api.users.UserService;
 import com.google.appengine.api.users.UserServiceFactory;
 import com.google.codeu.data.Datastore;
 import com.google.codeu.data.Message;
 import com.google.gson.Gson;
-import java.io.IOException;
-import java.util.List;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+
 import org.jsoup.Jsoup;
 import org.jsoup.safety.Whitelist;
+
+import com.vladsch.flexmark.util.ast.Node;
+import com.vladsch.flexmark.html.HtmlRenderer;
+import com.vladsch.flexmark.parser.Parser;
+import com.vladsch.flexmark.util.options.MutableDataSet;
 
 /** Handles fetching and saving {@link Message} instances. */
 @WebServlet("/messages")
@@ -75,13 +83,21 @@ public class MessageServlet extends HttpServlet {
       return;
     }
 
+    MutableDataSet options = new MutableDataSet();
+
     String user = userService.getCurrentUser().getEmail();
     String userText = Jsoup.clean(request.getParameter("text"), Whitelist.none());
+
+    Parser parser = Parser.builder(options).build();
+    HtmlRenderer renderer = HtmlRenderer.builder(options).build();
+
+    Node document = parser.parse(userText);
+    String styledtxt = renderer.render(document); 
 
     String regex = "(https?://\\S+\\.(png|jpg|gif))";
     String replacement = "<img src=\"$1\"/>";
 
-    String textWithImagesReplaced = userText.replaceAll(regex, replacement);
+    String textWithImagesReplaced = styledtxt.replaceAll(regex, replacement);
 
     Message message = new Message(user, textWithImagesReplaced);
     datastore.storeMessage(message);
