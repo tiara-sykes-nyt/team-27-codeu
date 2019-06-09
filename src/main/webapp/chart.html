@@ -31,8 +31,20 @@
     //In this case, BarChart
     var chart = new google.visualization.BarChart(document.getElementById('book_chart'));
 
+
+    //Creates a dictionary for chart customization
+    var chart_options = {
+                          width: 800,
+                          height: 400,
+                          title: "This is the Doggone Chart Title",
+                          fontSize: 12
+            };
+
+
+
+
     //Draw chart
-    chart.draw(book_data);
+    chart.draw(book_data, chart_options);
   }
 </script>
 
