@@ -1,9 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>A New Chart</title>
-  </head>
-  <body>
-    <h1>Chart Project</h1>
-  </body>
+<head>
+
+  <title>A New Chart</title>
+
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+  google.charts.load('current', {packages: ['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart(){
+
+    //Create a new DataTable instance
+    var book_data = new google.visualization.DataTable();
+
+    //define columns for the DataTable instance
+    book_data.addColumn('string', 'Book Title');
+    book_data.addColumn('number', 'Votes');
+
+    //add data to book_data
+    //This is test data!
+    book_data.addRows([
+      ["The Best We Could Do", 6],
+      ["Sing, Unburied, Sing", 10],
+      ["The Book of Unknown Americans", 7],
+      ["The 57 Bus", 4],
+      ["The Handmaid's Tale", 8]
+    ]);
+
+    //Create a new instance of a chart
+    //In this case, BarChart
+    var chart = new google.visualization.BarChart(document.getElementById('book_chart'));
+
+    //Draw chart
+    chart.draw(book_data);
+  }
+</script>
+
+
+</head>
+<body>
+  <h1>Test Chart with Starter Data About Books</h1>
+
+
+<div id="book_chart"></div>
+
+
+
+
+</body>
 </html>
