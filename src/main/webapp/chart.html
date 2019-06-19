@@ -2,62 +2,51 @@
 <html>
 <head>
 
-  <title>A New Chart</title>
+  <title>Sample User Data Chart</title>
 
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
   google.charts.load('current', {packages: ['corechart']});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart(){
+    fetch("/userchart")
+    .then((response) => {
+      return response.json();
+    })
 
-    //Create a new DataTable instance
-    var book_data = new google.visualization.DataTable();
+    .then((userJson) => {
+      var userData = new google.visualization.DataTable();
+      //define columns for the DataTable instance
+      userData.addColumn('string', 'Name of User');
+      userData.addColumn('number', 'Average Rating');
 
-    //define columns for the DataTable instance
-    book_data.addColumn('string', 'Book Title');
-    book_data.addColumn('number', 'Votes');
+      for (i = 0; i < userJson.length; i++) {
+        userRow = [];
+        var name = userJson[i].name;
+        var rating = userJson[i].rating;
+        userRow.push(name, rating);
 
-    //add data to book_data
-    //This is test data!
-    book_data.addRows([
-      ["The Best We Could Do", 6],
-      ["Sing, Unburied, Sing", 10],
-      ["The Book of Unknown Americans", 7],
-      ["The 57 Bus", 4],
-      ["The Handmaid's Tale", 8]
-    ]);
-
-    //Create a new instance of a chart
-    //In this case, BarChart
-    var chart = new google.visualization.BarChart(document.getElementById('book_chart'));
-
-
-    //Creates a dictionary for chart customization
-    var chart_options = {
-                          width: 800,
-                          height: 400,
-                          title: "This is the Doggone Chart Title",
-                          fontSize: 12
-            };
-
-
-
-
-    //Draw chart
-    chart.draw(book_data, chart_options);
+        userData.addRow(userRow);
+      }
+      var chartOptions = {
+        tooltip: {isHtml: true},
+        legend: 'none',
+        width: 800,
+        height: 400,
+        title: 'Average User Ratings',
+        is3D: true
+      };
+      var userChart = new google.visualization.ColumnChart(document.getElementById('user_chart'));
+      userChart.draw(userData, chartOptions);
+    })
   }
-</script>
-
+  </script>
 
 </head>
 <body>
-  <h1>Test Chart with Starter Data About Books</h1>
+  <h1>Sample User Data Chart</h1>
 
-
-<div id="book_chart"></div>
-
-
-
+  <div id="user_chart"></div>
 
 </body>
 </html>
