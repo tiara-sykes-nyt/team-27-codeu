@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fast Food Restaurants</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk4eW11F6Tn08mUSJVZzBWQRvi5JdbxIo"></script>
+    <script>
+    function createRestaurantMap(){
+      fetch('/fast-food-restaurant-data').then(function(response) {
+        return response.json();
+      }).then((restaurantLocations) => {
+        const map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 35.78613674, lng: -119.4491591},
+          zoom:7
+        });
+        restaurantLocations.forEach((restaurantLocation) => {
+          new google.maps.Marker({
+            position: {lat: restaurantLocation.lat, lng: restaurantLocation.lng},
+            map: map
+          });
+        });
+      });
+    }
+  </script>
+    <style>
+    #map{
+      width: 700px;
+      height: 700px;
+    }
+  </style>
+</head>
+<body onload="createRestaurantMap();">
+<h1>Fast Food Restaurants</h1>
+<p>Time period covered: Jan 3, 2014 - Jun 26, 2018</p>
+<p>Area Covered: North Pacific Ocean, Pacific Ocean</p>
+<div id="map"></div>
+</body>
+</html>
