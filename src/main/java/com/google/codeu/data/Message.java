@@ -24,6 +24,7 @@ public class Message {
   private UUID id;
   private String user;
   private String text;
+  private String imageURL;
   private long timestamp;
 
   /**
@@ -34,10 +35,22 @@ public class Message {
     this(UUID.randomUUID(), user, text, System.currentTimeMillis());
   }
 
+  public Message(String user, String text, String imageURL) {
+    this(UUID.randomUUID(), user, text, imageURL, System.currentTimeMillis());
+  }
+
   public Message(UUID id, String user, String text, long timestamp) {
     this.id = id;
     this.user = user;
     this.text = text;
+    this.timestamp = timestamp;
+  }
+
+  public Message(UUID id, String user, String text, String imageURL, long timestamp) {
+    this.id = id;
+    this.user = user;
+    this.text = text;
+    this.imageURL = imageURL;
     this.timestamp = timestamp;
   }
 
@@ -51,6 +64,10 @@ public class Message {
 
   public String getText() {
     return text;
+  }
+
+  public String getImageURL() {
+    return imageURL;
   }
 
   public long getTimestamp() {
