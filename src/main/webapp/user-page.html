@@ -13,17 +13,17 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 -->
-
 <!DOCTYPE html>
 <html>
   <head>
     <title>User Page</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/main.css">
     <link rel="stylesheet" href="/css/user-page.css">
     <script src="/js/user-page-loader.js"></script>
   </head>
   <body onload="buildUI();">
+
+
     <nav>
       <ul id="navigation">
         <li><a href="/">Home</a></li>
@@ -47,9 +47,6 @@ limitations under the License.
       Enter a new message:
       <br/>
       <textarea name="text" placeholder="What's on your mind?" id="message-input"></textarea>
-      Add an image to your message:
-      <input type="file" name="image">
-      <br/>
       <input type="submit" value="Submit">
 
     
@@ -57,8 +54,5 @@ limitations under the License.
     <hr/>
 
     <div id="message-container">Loading...</div>
-
-
-
   </body>
 </html>

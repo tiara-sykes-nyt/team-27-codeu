@@ -16,38 +16,129 @@
 
 /* Set the size of the message input to be 100 pixels high
    and will fill the width of its parent element. */
-#message-input {
-  height: 100px;
-  width: 100%;
-}
+   body {
+    margin: 0;
+    font-family: sans-serif;
+  }
+  
+  nav {
+    background-color: #f4f4f4;
+    font-size: 18pt;
+    padding: 10px;
+  }
+  
+  nav a {
+    color: #898989;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: all 300ms ease;
+  }
 
-/* Give each message a rounded border. */
-.message-div {
-  border: thin solid black;
-  border-radius: 5px;
-  margin-top: 20px;
-}
+  nav a:hover {
+    color: #161616;
+  }
+  
+  h2 {
+    margin: 0;
+  }
 
-/* Add a bottom border to the message header. */
-.message-header {
-  border-bottom: thin solid black;
-  padding: 5px;
-}
+  nav ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  /* Keep navigation menu on one line. */
+  nav li {
+    display: inline-block;
+    margin-right: 10px
+  }
+  
+  input[type=submit] {
+    background-color: #ccccff;
+    height: 50px;
+    width: 100px;
+    font-size: 14pt;
+    transition: all 300ms ease;
+  }
 
-/* Give the message body a margin so the text
-   isn't too close to the border. */
-.message-body {
-  margin: 5px;
-}
+  input[type=submit]:hover {
+    background-color: #8080ff; 
+  }
 
-.message-body img{
-    display: block;
-    margin-top: 25px;
-    max-width: 75%;
-}
+  #page-title {
+    font-size: 24px;
+  }
 
-/* Use this to hide certain elements like forms if the
-   user is not logged in or viewing their own page. */
-.hidden {
-  display: none;
-}
+  #message-form {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #message-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    width: calc(100% - 40px);
+  }
+  
+  #content {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  
+  #message-input {
+    height: 100px;
+    width: 99%;
+    border-radius: 3px;
+    border: 1px solid #161616;
+  }
+
+  #navigation {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
+
+  .message-div {
+    border: 1.5px solid #e5e5ff;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    border-radius: 3px;
+  }
+  
+  .message-header {
+    border-bottom: thin solid #b2b2ff;
+    background: #e5e5ff;
+  }
+  
+  .message-body {
+    font: 12pt;
+  }
+  
+  .panel {
+    background-color: white;
+    margin-top: 20px;
+  }
+  
+  .centered{
+    text-align: center;
+  }
+  
+  .padded {
+    padding: 10px;
+  }
+  
+  .rounded {
+    border: thin solid black;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
