@@ -83,10 +83,15 @@ function showMessageFormIfViewingSelf() {
     bodyDiv.classList.add('message-body');
     bodyDiv.innerHTML = message.text;
 
+    const imageDiv = document.createElement('div');
+    imageDiv.classList.add('message-image');
+    imageDiv.innerHTML = "<img src=\"" + message.imageURL + "\"/>";
+
     const messageDiv = document.createElement('div');
     messageDiv.classList.add('message-div');
     messageDiv.appendChild(headerDiv);
     messageDiv.appendChild(bodyDiv);
+    messageDiv.appendChild(imageDiv);
 
       return messageDiv;
     }
