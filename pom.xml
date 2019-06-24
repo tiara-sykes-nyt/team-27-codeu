@@ -68,9 +68,15 @@ limitations under the License.
     </dependency>
 
     <dependency>
-        <groupId>com.vladsch.flexmark</groupId>
-        <artifactId>flexmark-all</artifactId>
-        <version>0.42.12</version>
+      <groupId>com.vladsch.flexmark</groupId>
+      <artifactId>flexmark-all</artifactId>
+      <version>0.42.12</version>
+    </dependency>
+
+    <dependency>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>google-cloud-vision</artifactId>
+        <version>1.55.0</version>
     </dependency>
 
     <dependency>
@@ -79,6 +85,11 @@ limitations under the License.
       <version>1.55.0</version>
     </dependency>
 
+    <dependency>
+      <groupId>com.google.cloud</groupId>
+      <artifactId>google-cloud-translate</artifactId>
+      <version>1.55.0</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -86,7 +97,20 @@ limitations under the License.
       <plugin>
         <groupId>com.google.appengine</groupId>
         <artifactId>appengine-maven-plugin</artifactId>
-        <version>1.9.59</version>
+        <version>1.9.75</version>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.6.0</version>
+        <configuration>
+          <mainClass>VisionHelloWorld</mainClass>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.google.cloud</groupId>
+        <artifactId>google-cloud-vision</artifactId>
+        <version>1.55.0</version>
       </plugin>
     </plugins>
   </build>
