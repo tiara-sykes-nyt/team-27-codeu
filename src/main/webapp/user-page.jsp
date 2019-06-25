@@ -1,18 +1,13 @@
-<!--
-Copyright 2019 Google Inc.
+<%-- The Java code in this JSP file runs on the server when the user navigates
+     to the homepage. This allows us to insert the Blobstore upload URL into the
+     form without building the HTML using print statements in a servlet. --%>
+<%@ page import="com.google.appengine.api.blobstore.BlobstoreService" %>
+<%@ page import="com.google.appengine.api.blobstore.BlobstoreServiceFactory" %>
+<% BlobstoreService blobstoreService = BlobstoreServiceFactory.getBlobstoreService();
+   String uploadUrl = blobstoreService.createUploadUrl("/messages"); %>
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
 
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
--->
 <!DOCTYPE html>
 <html>
   <head>
@@ -43,13 +38,14 @@ limitations under the License.
 </div>
 
 <!-- Messages-->
-    <form id="message-form" action="/messages" method="POST" class="hidden">
-      Enter a new message:
+    <form id="message-form" action="<%= uploadUrl %>" method="POST" enctype="multipart/form-data">
+      <p>Enter a new message:</p>
       <br/>
       <textarea name="text" placeholder="What's on your mind?" id="message-input"></textarea>
+      <p>Upload an image (optional):</p>
+      <input type="file" name="image">
+      <br/><br/>
       <input type="submit" value="Submit">
-
-    
     </form>
     <hr/>
 
