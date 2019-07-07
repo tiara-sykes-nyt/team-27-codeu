@@ -114,6 +114,10 @@
     border-bottom: thin solid #b2b2ff;
     background: #e5e5ff;
   }
+
+  .claim-tag {
+    background: #FFFF00
+  }
   
   .message-body {
     font: 12pt;
