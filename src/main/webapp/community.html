@@ -2,10 +2,13 @@
 <html>
   <head>
     <title>Community Page</title>
-    <link rel="stylesheet" href="/css/main.css">
-
+    <meta charset="UTF-8">
+    <!-- Standard css-->
+      <!--  <link rel="stylesheet" href="/css/main.css"> -->
+    <!-- Styled css-->
+      <link rel="stylesheet" href="/css/user-page.css">
+    <script src="/js/navigation-loader.js"></script>
     <script>
-
       /** Fetches users and adds them to the page. */
       function fetchUserList(){
         const url = '/user-list';
@@ -41,7 +44,21 @@
       }
     </script>
   </head>
-  <body onload="buildUI()">
+
+
+  <body onload="addLoginOrLogoutLinkToNavigation(); buildUI()">
+    <nav>
+      <ul id="navigation">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/aboutus.html">Meet The Team</a></li>
+        <li><a href="/community.html">Community</a></li>
+        <li><a href="/stats.html">Stats</a></li>
+        <li><a href="/feed.html">Orders</a></li>
+        <li><a href="/restaurant-map.html">Map</a></li>
+        <li><a href="/chart.html">Reviews</a></li>
+      </ul>
+    </nav>
+
     <div id="content">
       <h1>Community Page</h1>
       <p>Here is a list of every user who has posted a message:</p>
@@ -49,4 +66,5 @@
       <ul id="list">Loading...</ul>
     </div>
   </body>
+
 </html>
