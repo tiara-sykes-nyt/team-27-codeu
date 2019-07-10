@@ -23,11 +23,11 @@ function fetchMessages(){
   });
 }
 
-/** buildMessageDiv creates a message div for each message 
+/** buildMessageDiv creates a message div for each message
 * including username, post date, and the content of the message
 */
 function buildMessageDiv(message){
-  //username div 
+  //username div
   const usernameDiv = document.createElement('div');
   usernameDiv.classList.add("left-align");
   usernameDiv.appendChild(document.createTextNode(message.user));
@@ -53,7 +53,7 @@ function buildMessageDiv(message){
   button.addEventListener("click", function(){
     // hide the button
     buttonDiv.removeChild(button);
-    // shows the claim tag  
+    // shows the claim tag
     const claimTag = document.createElement('div');
     claimTag.classList.add('claim-tag');
     claimTag.innerHTML = "Request claimed";
@@ -69,11 +69,17 @@ function buildMessageDiv(message){
   bodyDiv.innerHTML = message.text;
   bodyDiv.appendChild(buttonDiv);
 
-  // a general message div consists of the header and body of each message 
+  const imageDiv = document.createElement('div');
+  imageDiv.classList.add('message-image');
+  imageDiv.innerHTML = "<img src=\"" + message.imageURL + "\"/>";
+
+  // a general message div consists of the header and body of each message
   const messageDiv = document.createElement('div');
   messageDiv.classList.add("message-div");
   messageDiv.appendChild(headerDiv);
   messageDiv.appendChild(bodyDiv);
+  if (message.imageURL != null)
+    messageDiv.appendChild(imageDiv);
 
   return messageDiv;
 }
