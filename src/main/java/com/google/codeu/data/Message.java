@@ -26,7 +26,7 @@ public class Message {
   private String text;
   private String imageURL;
   private long timestamp;
-  private int status;
+  private long status;
   private String address;
 
   /**
@@ -41,7 +41,7 @@ public class Message {
     this(UUID.randomUUID(), user, text, imageURL, System.currentTimeMillis());
   }
 
-  public Message(String user, String text, String imageURL, int status, String address) {
+  public Message(String user, String text, String imageURL, long status, String address) {
     this(UUID.randomUUID(), user, text, imageURL, System.currentTimeMillis(),
             status, address);
   }
@@ -62,7 +62,7 @@ public class Message {
   }
 
   public Message(UUID id, String user, String text, String imageURL, long timestamp,
-          int status, String address) {
+          long status, String address) {
     this.id = id;
     this.user = user;
     this.text = text;
@@ -92,7 +92,7 @@ public class Message {
     return timestamp;
   }
 
-  public int getStatus() {
+  public long getStatus() {
     return status;
   }
 
