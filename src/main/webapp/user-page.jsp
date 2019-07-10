@@ -21,8 +21,12 @@
 
     <nav>
       <ul id="navigation">
-        <li><a href="/">Home</a></li>
-        <li><a href="/aboutus.html">About Our Team</a></li>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/aboutus.html">Meet The Team</a></li>
+        <li><a href="/community.html">Community</a></li>
+        <li><a href="/stats.html">Stats</a></li>
+        <li><a href="/feed.html">Order Feed</a></li>
+        <li><a href="/restaurant-map.html">Map</a></li>
       </ul>
     </nav>
     <h1 id="page-title">User Page</h1>

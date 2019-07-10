@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <meta charset="UTF-8">
         <title>Message Feed</title>
         <link rel="stylesheet" href="/css/main.css">
-        <link rel="stylesheet" href="/css/user-page.css">
+      <!--  <link rel="stylesheet" href="/css/user-page.css"> -->
         <script src="/js/public-feed-loader.js"></script>
+
     </head>
+
+  <body onload="addLoginOrLogoutLinkToNavigation();">
+    <nav>
+      <ul id="navigation">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/aboutus.html">Meet The Team</a></li>
+        <li><a href="/community.html">Community</a></li>
+        <li><a href="/stats.html">Stats</a></li>
+        <li><a href="/feed.html">Order Feed</a></li>
+        <li><a href="/restaurant-map.html">Map</a></li>
+      </ul>
+    </nav>
+  </body>
+
     <body onload="buildUI()">
         <div id="content">
             <h1>Public Food Requests</h1>
@@ -14,6 +30,3 @@
         </div>
     </body>
 </html>
-
-
-
