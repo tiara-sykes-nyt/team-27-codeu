@@ -20,35 +20,21 @@ limitations under the License.
 
   <title>CodeU 2019 Starter Project</title>
   <meta charset="UTF-8">
-  <!-- Standard css-->
-    <!--  <link rel="stylesheet" href="/css/main.css"> -->
-  <!-- Styled css-->
-    <link rel="stylesheet" href="/css/user-page.css">
+  <link rel="stylesheet" href="/css/main.css">
   <script src="/js/navigation-loader.js"></script>
 </head>
-<body>
-<!--  <div id="navigation-bar"></div> -->
+
+<body onload="addLoginOrLogoutLinkToNavigation();">
+  <div id="navigation-bar"></div>
   <div id="page-body">
     <div id="mini-about"><p>
       Lend a Hand – Share a meal</p></div>
       <div class="redirect" id="request-button"></div>
-      <div class=
-      "redirect" id="claim-button"></div>
+      <div class="redirect" id="claim-button"></div>
     </div>
   </body>
 
-  <body onload="addLoginOrLogoutLinkToNavigation();">
-    <nav>
-            <ul id="navigation">
-        <li><a href="/">Home</a></li>
-        <li><a href="/aboutus.html">Meet The Team</a></li>
-        <li><a href="/community.html">Community</a></li>
-        <li><a href="/stats.html">Stats</a></li>
-        <li><a href="/feed.html">Orders</a></li>
-        <li><a href="/chart.html">Map</a></li>
-        <li><a href="/chart.html">Reviews</a></li>
-      </ul>
-    </nav>
+
     <h1>CodeU team 27 - Student Food WebApp</h1>
     <p>Welcome to our Student Food WebApp, a place for students to get their favorite food and earn money!
       You can log in and let other people know what you are craving and other students nearby will
@@ -58,6 +44,7 @@ limitations under the License.
     </p>
     <p>What are you waiting for? Log in now!</p>
   </body>
+
   <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
