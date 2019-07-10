@@ -47,6 +47,8 @@ public class Datastore {
     messageEntity.setProperty("text", message.getText());
     messageEntity.setProperty("imageURL", message.getImageURL());
     messageEntity.setProperty("timestamp", message.getTimestamp());
+    messageEntity.setProperty("status", message.getStatus());
+    messageEntity.setProperty("address", message.getAddress());
 
     datastore.put(messageEntity);
   }
@@ -84,13 +86,15 @@ public class Datastore {
         String text = (String) entity.getProperty("text");
         String imageURL = (String) entity.getProperty("imageURL");
         long timestamp = (long) entity.getProperty("timestamp");
+        long status = (long) entity.getProperty("status");
+        String address = (String) entity.getProperty("address");
 
         Message message;
         if (!isSpecificUser){
           String eachUser = (String) entity.getProperty("user");
-          message = new Message(id, eachUser, text, imageURL, timestamp);
+          message = new Message(id, eachUser, text, imageURL, timestamp, status, address);
         }else{
-          message = new Message(id, user, text, imageURL, timestamp);
+          message = new Message(id, user, text, imageURL, timestamp, status, address);
         }
         messages.add(message);
       }catch (Exception e){
