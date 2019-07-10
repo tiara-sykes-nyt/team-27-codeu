@@ -22,11 +22,26 @@ limitations under the License.
     <link rel="stylesheet" href="/css/main.css">
     <script src="/js/navigation-loader.js"></script>
   </head>
+  <body>
+    <div id="navigation-bar"></div>
+    <div id="page-body">
+      <div id="mini-about"><p>
+        Lend a Hand – Share a meal</p></div>
+      <div class="redirect" id="request-button"></div>
+      <div class=
+      "redirect" id="claim-button"></div>
+    </div>
+  </body>
+
   <body onload="addLoginOrLogoutLinkToNavigation();">
     <nav>
-      <ul id="navigation">
+            <ul id="navigation">
         <li><a href="/">Home</a></li>
-        <li><a href="/aboutus.html">About Our Team</a></li>
+        <li><a href="/aboutus.html">Meet The Team</a></li>
+        <li><a href="/community.html">Community</a></li>
+        <li><a href="/stats.html">Stats</a></li>
+        <li><a href="/feed.html">Order Feed</a></li>
+        <li><a href="/restaurant-map.html">Map</a></li>
       </ul>
     </nav>
     <h1>CodeU team 27 - Student Food WebApp</h1>
@@ -38,4 +53,10 @@ limitations under the License.
     </p>
     <p>What are you waiting for? Log in now!</p>
   </body>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  <script type="text/babel" src="js/Navigation-bar/navigation-bar.js"></script>
+  <script type="text/babel" src="js/Request-Component/request-link.js"></script>
+  <script type="text/babel" src="js/Claim-Component/index.js"></script>
 </html>
