@@ -4,6 +4,12 @@
 
   <title>Sample User Data Chart</title>
 
+  <!-- Standard css-->
+    <!--  <link rel="stylesheet" href="/css/main.css"> -->
+  <!-- Styled css-->
+    <link rel="stylesheet" href="/css/user-page.css">
+  <script src="/js/navigation-loader.js"></script>
+
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
   google.charts.load('current', {packages: ['corechart']});
@@ -43,9 +49,20 @@
   </script>
 
 </head>
-<body>
-  <h1>Sample User Data Chart</h1>
+<body onload="addLoginOrLogoutLinkToNavigation();">
+  <nav>
+    <ul id="navigation">
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/aboutus.html">Meet The Team</a></li>
+      <li><a href="/community.html">Community</a></li>
+      <li><a href="/stats.html">Stats</a></li>
+      <li><a href="/feed.html">Orders</a></li>
+      <li><a href="/restaurant-map.html">Map</a></li>
+      <li><a href="/chart.html">Reviews</a></li>
+    </ul>
+  </nav>
 
+  <h1>Ratings</h1>
   <div id="user_chart"></div>
 
 </body>

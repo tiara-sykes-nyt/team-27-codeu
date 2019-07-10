@@ -5,7 +5,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,17 +16,21 @@ limitations under the License.
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>CodeU 2019 Starter Project</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <script src="/js/navigation-loader.js"></script>
-  </head>
-  <body>
-    <div id="navigation-bar"></div>
-    <div id="page-body">
-      <div id="mini-about"><p>
-        Lend a Hand – Share a meal</p></div>
+<head>
+
+  <title>CodeU 2019 Starter Project</title>
+  <meta charset="UTF-8">
+  <!-- Standard css-->
+    <!--  <link rel="stylesheet" href="/css/main.css"> -->
+  <!-- Styled css-->
+    <link rel="stylesheet" href="/css/user-page.css">
+  <script src="/js/navigation-loader.js"></script>
+</head>
+<body>
+  <div id="navigation-bar"></div>
+  <div id="page-body">
+    <div id="mini-about"><p>
+      Lend a Hand – Share a meal</p></div>
       <div class="redirect" id="request-button"></div>
       <div class=
       "redirect" id="claim-button"></div>
@@ -35,13 +39,14 @@ limitations under the License.
 
   <body onload="addLoginOrLogoutLinkToNavigation();">
     <nav>
-            <ul id="navigation">
+      <ul id="navigation">
         <li><a href="/">Home</a></li>
         <li><a href="/aboutus.html">Meet The Team</a></li>
         <li><a href="/community.html">Community</a></li>
         <li><a href="/stats.html">Stats</a></li>
-        <li><a href="/feed.html">Order Feed</a></li>
-        <li><a href="/restaurant-map.html">Map</a></li>
+        <li><a href="/feed.html">Orders</a></li>
+        <li><a href="/chart.html">Map</a></li>
+        <li><a href="/chart.html">Reviews</a></li>
       </ul>
     </nav>
     <h1>CodeU team 27 - Student Food WebApp</h1>
@@ -59,4 +64,4 @@ limitations under the License.
   <script type="text/babel" src="js/Navigation-bar/navigation-bar.js"></script>
   <script type="text/babel" src="js/Request-Component/request-link.js"></script>
   <script type="text/babel" src="js/Claim-Component/index.js"></script>
-</html>
+  </html>

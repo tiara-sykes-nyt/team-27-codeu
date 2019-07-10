@@ -2,8 +2,12 @@
 <html>
 <head>
   <title>Stats</title>
-  <link rel="stylesheet" href="/css/main.css">
+  <!-- Standard css-->
+    <!--  <link rel="stylesheet" href="/css/main.css"> -->
+  <!-- Styled css-->
+    <link rel="stylesheet" href="/css/user-page.css">
   <script src="/js/navigation-loader.js"></script>
+
 
   <script>
     // Fetch stats and display them in the page.
@@ -33,24 +37,24 @@
   </script>
 </head>
 
-<body onload="addLoginOrLogoutLinkToNavigation();">
+<body onload="addLoginOrLogoutLinkToNavigation(); buildUI();">
   <nav>
     <ul id="navigation">
       <li><a href="/index.html">Home</a></li>
       <li><a href="/aboutus.html">Meet The Team</a></li>
       <li><a href="/community.html">Community</a></li>
       <li><a href="/stats.html">Stats</a></li>
-      <li><a href="/feed.html">Order Feed</a></li>
+      <li><a href="/feed.html">Orders</a></li>
       <li><a href="/restaurant-map.html">Map</a></li>
+      <li><a href="/chart.html">Reviews</a></li>
     </ul>
   </nav>
+
+  <div id="content">
+    <h1>Site Statistics</h1>
+    <hr/>
+    <div id="stats-container">Loading...</div>
+  </div>
 </body>
 
-<body onload="buildUI()">
-<div id="content">
-  <h1>Site Statistics</h1>
-  <hr/>
-  <div id="stats-container">Loading...</div>
-</div>
-</body>
 </html>
