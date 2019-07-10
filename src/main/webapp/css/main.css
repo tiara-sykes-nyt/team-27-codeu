@@ -16,6 +16,11 @@
 
 /* Prevent the page from becoming too wide. */
 /* Remove bullet points from navigation bar. */
+html, body {
+  height: 100%;
+  margin: 0px;
+}
+
 nav ul {
   list-style-type: none;
   padding-left: 0;
@@ -24,29 +29,76 @@ nav ul {
 /* Keep navigation menu on one line. */
 nav li {
   display: inline-block;
-  margin-right: 10px
+  margin-right: 20px;
+  margin-left: 20px;
+  font-size: 14pt;
 }
 
 a {
   text-decoration: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #878787;
+}
+
+.redirect { 
+  position: relative;
+  display: inline-block;
+  color: white;
+  margin-left: 0px;
+  background-color: #F24236;
+  border-radius: 50px;
+  width: 189px;
+  height: 50px;
+  text-align: center;
+  padding-top: 0px;
+  line-height: 50px;
+  top: 350px;
+  font-size: 14pt;
+  opacity: 0.9;
+}
+
+#page-body {
+  background-color: #efefef;
+  height: 100%;
+}
+
+#page-body a {
+  color: white;
+  display: block;
+}
+
+#mini-about p { 
+  border: 6px solid rgba(159, 228, 242, 0);
+  width: 91%;
+  display: inline-block;
+  color: white;
+  background-color: rgba(159, 228, 242, 0.6);
+  font-size: 40px;
+  font-size: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva,Verdana, sans-serif;
+}
+#mini-about { 
+  position: relative;
+  text-align: center;
+  top: 200px;
 }
 
 #request-button { 
-  background-color: #ccccff;
-  font-size: 14pt;
+  left: 200px;
   transition: all 300ms ease;
 }
 
-#request-button:hover {
-  background-color: #8080ff; 
+.redirect:hover {
+  box-shadow: 4px 5px 4px #8888;
+  opacity: 1;
+}
+
+.nav-link:hover {
+  transition: all 300ms ease;
+  color:  #F24236;
 }
 
 #claim-button {
-  background-color: #ccccff;
-  font-size: 14pt;
+  left: 600px;
   transition: all 300ms ease;
-}
-
-#claim-button:hover {
-  background-color: #8080ff; 
 }
