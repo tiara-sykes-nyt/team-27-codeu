@@ -5,7 +5,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,61 +16,58 @@ limitations under the License.
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>About Us</title>
-    <!-- Standard css-->
-      <!--  <link rel="stylesheet" href="/css/main.css"> -->
-    <!-- Styled css-->
-      <link rel="stylesheet" href="/css/user-page.css">
-    <script src="/js/navigation-loader.js"></script>
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <title>About Us</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/navigation-loader.js"></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  <script type="text/babel" src="js/Navigation-bar/navigation-bar.js"></script>
+  <script type="text/babel" src="js/Request-Component/request-link.js"></script>
+  <script type="text/babel" src="js/Claim-Component/index.js"></script>
+</head>
 
-  <body onload="addLoginOrLogoutLinkToNavigation();">
+<body onload="addLoginOrLogoutLinkToNavigation();">
+  <div id="navigation-bar"></div>
 
-    <nav>
-      <ul id="navigation">
-        <li><a href="/index.html">Home</a></li>
-        <li><a href="/aboutus.html">Meet The Team</a></li>
-        <li><a href="/community.html">Community</a></li>
-        <li><a href="/stats.html">Stats</a></li>
-        <li><a href="/feed.html">Orders</a></li>
-        <li><a href="/restaurant-map.html">Map</a></li>
-        <li><a href="/chart.html">Reviews</a></li>
-      </ul>
-    </nav>
 
-    <h1>About Our Team</h1>
-    <h2>Tiara Sykes</h2>
-    <ul>
-      <li>Summer Feelz: Excited, Adventurous, Relaxing</li>
-      <li>Aspirational Hobby: I would want to be a freelance makeup artist or work on music production</li>
-      <li>Ask me About: Social Justice (Acessibility to Quality Education)</li>
-    </ul>
-    <h2>Khanh Ngo</h2>
-    <ul>
-      <li>Summer Feelz: exciting, challenging, relaxing</li>
-      <li>Aspirational Hobby: travelling around the world</li>
-      <li>Ask me About: piano</li>
-    </ul>
-    <h2>Stephen Ankoue</h2>
-    <ul>
-      <li>Summer Feelz: Relaxed, Excited, Ready</li>
-      <li>Aspirational Hobby: I'd learn to play the guitar</li>
-      <li>Ask me About: Super Smash Bros.</li>
-    </ul>
-    <h2>Daniel Lee</h2>
-    <ul>
-      <li>Summer Feelz: Excited, Hopeful, Relieved</li>
-      <li>Aspirational Hobby: Voice acting! I love reading and narrating</li>
-      <li>Ask me About: Super Smash Bros. Ultimate</li>
-    </ul>
-    <h2>Alison Kao (PA) </h2>
-    <ul>
-      <li>Summer Feelz: it's too hot</li>
-      <li>Aspirational Hobby: flying a plane</li>
-      <li>Ask me About: why doge is such best very meme wow</li>
-    </ul>
+  <h1>About Our Team</h1>
+  <h2>Tiara Sykes</h2>
+  <ul>
+    <li>Summer Feelz: Excited, Adventurous, Relaxing</li>
+    <li>Aspirational Hobby: I would want to be a freelance makeup artist or work on music production</li>
+    <li>Ask me About: Social Justice (Acessibility to Quality Education)</li>
+  </ul>
+  <h2>Khanh Ngo</h2>
+  <ul>
+    <li>Summer Feelz: exciting, challenging, relaxing</li>
+    <li>Aspirational Hobby: travelling around the world</li>
+    <li>Ask me About: piano</li>
+  </ul>
+  <h2>Stephen Ankoue</h2>
+  <ul>
+    <li>Summer Feelz: Relaxed, Excited, Ready</li>
+    <li>Aspirational Hobby: I'd learn to play the guitar</li>
+    <li>Ask me About: Super Smash Bros.</li>
+  </ul>
+  <h2>Daniel Lee</h2>
+  <ul>
+    <li>Summer Feelz: Excited, Hopeful, Relieved</li>
+    <li>Aspirational Hobby: Voice acting! I love reading and narrating</li>
+    <li>Ask me About: Super Smash Bros. Ultimate</li>
+  </ul>
+  <h2>Alison Kao (PA) </h2>
+  <ul>
+    <li>Summer Feelz: it's too hot</li>
+    <li>Aspirational Hobby: flying a plane</li>
+    <li>Ask me About: why doge is such best very meme wow</li>
+  </ul>
 
-  </body>
+</body>
+
+
+
+
 </html>

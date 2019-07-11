@@ -10,11 +10,7 @@ class NavigationBar extends React.Component{
 
         <li><a className="nav-link" href="/">Home</a></li>
         <li><a className="nav-link" href="/aboutus.html">About Us</a></li>
-        <li><a className="nav-link" href="/community.html">Community</a></li>
-        <li><a className="nav-link" href="/stats.html">Stats</a></li>
-        <li><a className="nav-link" href="/feed.html">Orders</a></li>
-        <li><a className="nav-link" href="/restaurant-map.html">Map</a></li>
-        <li><a className="nav-link" href="/chart.html">Reviews</a></li>
+        <li><a className="nav-link" href="/feed.html">Requests</a></li>
 
       </ul>
     </nav>
