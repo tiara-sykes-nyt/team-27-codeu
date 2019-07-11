@@ -3,12 +3,14 @@
 <head>
 
   <title>Sample User Data Chart</title>
-
-  <!-- Standard css-->
-    <!--  <link rel="stylesheet" href="/css/main.css"> -->
-  <!-- Styled css-->
-    <link rel="stylesheet" href="/css/user-page.css">
+  <link rel="stylesheet" href="/css/main.css">
   <script src="/js/navigation-loader.js"></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  <script type="text/babel" src="js/Navigation-bar/navigation-bar.js"></script>
+  <script type="text/babel" src="js/Request-Component/request-link.js"></script>
+  <script type="text/babel" src="js/Claim-Component/index.js"></script>
 
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
   <script type="text/javascript">
@@ -49,21 +51,12 @@
   </script>
 
 </head>
-<body onload="addLoginOrLogoutLinkToNavigation();">
-  <nav>
-    <ul id="navigation">
-      <li><a href="/index.html">Home</a></li>
-      <li><a href="/aboutus.html">Meet The Team</a></li>
-      <li><a href="/community.html">Community</a></li>
-      <li><a href="/stats.html">Stats</a></li>
-      <li><a href="/feed.html">Orders</a></li>
-      <li><a href="/restaurant-map.html">Map</a></li>
-      <li><a href="/chart.html">Reviews</a></li>
-    </ul>
-  </nav>
 
+
+<body onload="addLoginOrLogoutLinkToNavigation();">
+  <div id="navigation-bar"></div>
   <h1>Ratings</h1>
   <div id="user_chart"></div>
-
 </body>
+
 </html>

@@ -16,22 +16,16 @@ String uploadUrl = blobstoreService.createUploadUrl("/messages"); %>
       <link rel="stylesheet" href="/css/user-page.css">
         <script src="/js/user-page-loader.js"></script>
         <script src="/js/navigation-loader.js"></script>
+        <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+        <script type="text/babel" src="js/Navigation-bar/navigation-bar.js"></script>
+        <script type="text/babel" src="js/Request-Component/request-link.js"></script>
+        <script type="text/babel" src="js/Claim-Component/index.js"></script>
 
       </head>
       <body onload="addLoginOrLogoutLinkToNavigation(); buildUI();">
-
-
-        <nav>
-          <ul id="navigation">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/aboutus.html">Meet The Team</a></li>
-            <li><a href="/community.html">Community</a></li>
-            <li><a href="/stats.html">Stats</a></li>
-            <li><a href="/feed.html">Orders</a></li>
-            <li><a href="/restaurant-map.html">Map</a></li>
-            <li><a href="/chart.html">Reviews</a></li>
-          </ul>
-        </nav>
+        <div id="navigation-bar"></div>
         <h1 id="page-title">User Page</h1>
 
         <!-- About Me-->
