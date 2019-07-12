@@ -26,7 +26,7 @@ public class Message {
   private String text;
   private String imageURL;
   private long timestamp;
-  private long status;
+  private long status = 2; /* Hardcoded as 2 for now. Will be editable */
   private String address;
 
   /**
