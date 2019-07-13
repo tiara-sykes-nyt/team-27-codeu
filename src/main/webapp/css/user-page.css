@@ -26,31 +26,29 @@
     font-size: 18pt;
     padding: 10px;
   }
-  
-  nav a {
-    color: #898989;
-    margin-right: 10px;
-    text-decoration: none;
-    transition: all 300ms ease;
-  }
-
-  nav a:hover {
-    color: #161616;
-  }
-  
-  h2 {
-    margin: 0;
-  }
 
   nav ul {
     list-style-type: none;
     padding-left: 0;
   }
   
+  nav a {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #878787;
+  }
+
+  
+  h2 {
+    margin: 0;
+  }
+  
   /* Keep navigation menu on one line. */
   nav li {
     display: inline-block;
-    margin-right: 10px
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 14pt;
   }
   
   input[type=submit] {
@@ -101,6 +99,11 @@
   #navigation {
     margin-bottom: 0px;
     margin-top: 0px;
+  }
+
+  .nav-link:hover {
+    transition: all 300ms ease;
+    color:  #F24236;
   }
 
   .message-div {

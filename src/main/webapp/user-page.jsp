@@ -20,8 +20,6 @@ String uploadUrl = blobstoreService.createUploadUrl("/messages"); %>
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
         <script type="text/babel" src="js/Navigation-bar/navigation-bar.js"></script>
-        <script type="text/babel" src="js/Request-Component/request-link.js"></script>
-        <script type="text/babel" src="js/Claim-Component/index.js"></script>
 
       </head>
       <body onload="addLoginOrLogoutLinkToNavigation(); buildUI();">
