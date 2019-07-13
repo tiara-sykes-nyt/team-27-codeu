@@ -28,16 +28,6 @@ String uploadUrl = blobstoreService.createUploadUrl("/messages"); %>
         <div id="navigation-bar"></div>
         <h1 id="page-title">User Page</h1>
 
-        <!-- About Me-->
-        <div id="about-me-container">Loading...</div>
-        <div id="about-me-form" class="hidden">
-          <form action="/about" method="POST">
-            <textarea name="about-me" placeholder="Tell us about yourself!" rows=4 required></textarea>
-            <br/>
-            <input type="submit" value="Submit">
-            </form>
-          </div>
-
           <!-- Messages-->
           <form id="message-form" action="<%= uploadUrl %>" method="POST" enctype="multipart/form-data">
           <p>Enter a new message:</p>
