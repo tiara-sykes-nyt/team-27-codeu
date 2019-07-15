@@ -22,12 +22,6 @@ limitations under the License.
   <meta charset="UTF-8">
   <link rel="stylesheet" href="/css/main.css">
   <script src="/js/navigation-loader.js"></script>
-  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
-  <script type="text/babel" src="js/Navigation-bar/navigation-bar.js"></script>
-  <script type="text/babel" src="js/Request-Component/request-link.js"></script>
-  <script type="text/babel" src="js/Claim-Component/index.js"></script>
 </head>
 
 <body onload="addLoginOrLogoutLinkToNavigation();">
@@ -35,20 +29,18 @@ limitations under the License.
   <div id="page-body">
     <div id="mini-about"><p>
       Lend a Hand · Share a meal</p></div>
-      <div class="redirect" id="request-button"></div>
-      <div class="redirect" id="claim-button"></div>
+      <div class="container">
+      <div class=link-wrapper>
+        <div class="redirect" id="request-button"></div>
+        <div class="redirect" id="claim-button"></div>
     </div>
+    </div>
+  </div>
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script type="text/babel" src="js/Navigation-bar/navigation-bar.js"></script>
+    <script type="text/babel" src="js/Request-Component/request-link.js"></script>
+    <script type="text/babel" src="js/Claim-Component/index.js"></script>
   </body>
-
-
-  <h1>CodeU team 27 - Student Food WebApp</h1>
-  <p>Welcome to our Student Food WebApp, a place for students to get their favorite food and earn money!
-    You can log in and let other people know what you are craving and other students nearby will
-    get the food for you. You can also view other people's requests to help them fulfill their need.
-    Since we realized that some students have extra food swipes while others don't have enough for their meals,
-    you can also trade/give your unused food swipes at your school dining halls to other students as an act of kindness!
-  </p>
-  <p>What are you waiting for? Log in now!</p>
-
-
 </html>

@@ -36,7 +36,6 @@ String uploadUrl = blobstoreService.createUploadUrl("/messages"); %>
             <br/><br/>
             <input type="submit" value="Submit">
             </form>
-            <hr/>
 
             <div id="message-container">Loading...</div>
           </body>
