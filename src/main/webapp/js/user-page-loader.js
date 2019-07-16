@@ -62,7 +62,8 @@ function showMessageFormIfViewingSelf() {
       }
       messages.forEach((message) => {
         const messageDiv = buildMessageDiv(message);
-        messagesContainer.appendChild(messageDiv);
+        if (message.status == "2")
+          messagesContainer.appendChild(messageDiv);
       });
     });
   }

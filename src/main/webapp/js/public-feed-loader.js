@@ -18,7 +18,8 @@ function fetchMessages(){
     // for each message, crate a message div and add the corresponding text
     messages.forEach((message) => {
       const messageDiv = buildMessageDiv(message);
-      messageContainer.appendChild(messageDiv);
+      if (message.status == "2")
+        messageContainer.appendChild(messageDiv);
     });
   });
 }
