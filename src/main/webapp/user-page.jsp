@@ -20,23 +20,11 @@ String uploadUrl = blobstoreService.createUploadUrl("/messages"); %>
         <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
         <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
         <script type="text/babel" src="js/Navigation-bar/navigation-bar.js"></script>
-        <script type="text/babel" src="js/Request-Component/request-link.js"></script>
-        <script type="text/babel" src="js/Claim-Component/index.js"></script>
 
       </head>
       <body onload="addLoginOrLogoutLinkToNavigation(); buildUI();">
         <div id="navigation-bar"></div>
         <h1 id="page-title">User Page</h1>
-
-        <!-- About Me-->
-        <div id="about-me-container">Loading...</div>
-        <div id="about-me-form" class="hidden">
-          <form action="/about" method="POST">
-            <textarea name="about-me" placeholder="Tell us about yourself!" rows=4 required></textarea>
-            <br/>
-            <input type="submit" value="Submit">
-            </form>
-          </div>
 
           <!-- Messages-->
           <form id="message-form" action="<%= uploadUrl %>" method="POST" enctype="multipart/form-data">
@@ -48,7 +36,6 @@ String uploadUrl = blobstoreService.createUploadUrl("/messages"); %>
             <br/><br/>
             <input type="submit" value="Submit">
             </form>
-            <hr/>
 
             <div id="message-container">Loading...</div>
           </body>
