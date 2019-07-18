@@ -3,7 +3,7 @@
 const e = React.createElement;
 
 class NavigationBar extends React.Component{
-  render() { 
+  render() {
     return (
       <nav>
       <ul id="navigation">
@@ -62,7 +62,7 @@ class NavigationBar extends React.Component{
 </li>
         <li><a className="nav-link" href="/aboutus.html">About Our Team</a></li>
       </ul>
-    </nav> 
+    </nav>
     );
   }
 }

@@ -44,7 +44,6 @@ function showMessageFormIfViewingSelf() {
         messageForm.classList.remove('hidden');
       }
     });
-    document.getElementById('about-me-form').classList.remove('hidden');
   }
 
   /** Fetches messages and add them to the page. */
@@ -63,7 +62,8 @@ function showMessageFormIfViewingSelf() {
       }
       messages.forEach((message) => {
         const messageDiv = buildMessageDiv(message);
-        messagesContainer.appendChild(messageDiv);
+        if (message.status == "2")
+          messagesContainer.appendChild(messageDiv);
       });
     });
   }
@@ -78,7 +78,7 @@ function showMessageFormIfViewingSelf() {
     headerDiv.classList.add('message-header');
     headerDiv.appendChild(document.createTextNode(
       message.user + ' - ' + new Date(message.timestamp)));
-      
+
       const bodyDiv = document.createElement('div');
       bodyDiv.classList.add('message-body');
       bodyDiv.innerHTML = message.text;
@@ -91,7 +91,8 @@ function showMessageFormIfViewingSelf() {
       messageDiv.classList.add('message-div');
       messageDiv.appendChild(headerDiv);
       messageDiv.appendChild(bodyDiv);
-      messageDiv.appendChild(imageDiv);
+      if (message.imageURL != null)
+        messageDiv.appendChild(imageDiv);
 
       return messageDiv;
     }

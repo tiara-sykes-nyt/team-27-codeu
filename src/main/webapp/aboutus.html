@@ -5,7 +5,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -16,48 +16,68 @@ limitations under the License.
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>About Us</title>
-    <link rel="stylesheet" href="/css/main.css">
-  </head>
-  </head>
-    <nav>
-      <ul id="navigation">
-        <li><a href="/">Home</a></li>
-        <li><a href="/aboutus.html">About Our Team</a></li>
-      </ul>
-    </nav>
-    <h1>About Our Team</h1>
-    <h2>Tiara Sykes</h2>
-    <ul>
-      <li>Summer Feelz: Excited, Adventurous, Relaxing</li>
-      <li>Aspirational Hobby: I would want to be a freelance makeup artist or work on music production</li>
-      <li>Ask me About: Social Justice (Acessibility to Quality Education)</li>
-    </ul>
-    <h2>Khanh Ngo</h2>
-    <ul>
-      <li>Summer Feelz: exciting, challenging, relaxing</li>
-      <li>Aspirational Hobby: travelling around the world</li>
-      <li>Ask me About: piano</li>
-    </ul>
-    <h2>Stephen Ankoue</h2>
-    <ul>
-      <li>Summer Feelz: Relaxed, Excited, Ready</li>
-      <li>Aspirational Hobby: I'd learn to play the guitar</li>
-      <li>Ask me About: Super Smash Bros.</li>
-    </ul>
-    <h2>Daniel Lee</h2>
-    <ul>
-      <li>Summer Feelz: Excited, Hopeful, Relieved</li>
-      <li>Aspirational Hobby: Voice acting! I love reading and narrating</li>
-      <li>Ask me About: Super Smash Bros. Ultimate</li>
-    </ul>
-    <h2>Alison Kao (PA) </h2>
-    <ul>
-      <li>Summer Feelz: it's too hot</li>
-      <li>Aspirational Hobby: flying a plane</li>
-      <li>Ask me About: why doge is such best very meme wow</li>
-    </ul>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>About Us</title>
+  <link rel="stylesheet" href="/css/main.css">
+  <script src="/js/navigation-loader.js"></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+  <script type="text/babel" src="js/Navigation-bar/navigation-bar.js"></script>
+  <script type="text/babel" src="js/Request-Component/request-link.js"></script>
+  <script type="text/babel" src="js/Claim-Component/index.js"></script>
+</head>
+
+<body onload="addLoginOrLogoutLinkToNavigation();">
+  <div id="navigation-bar"></div>
+
+
+  <h1>CodeU team 27 - Student Food WebApp</h1>
+  <p>Welcome to our Student Food WebApp, a place for students to get their favorite food and earn money!
+    You can log in and let other people know what you are craving and other students nearby will
+    get the food for you. You can also view other people's requests to help them fulfill their need.
+    Since we realized that some students have extra food swipes while others don't have enough for their meals,
+    you can also trade/give your unused food swipes at your school dining halls to other students as an act of kindness!
+  </p>
+  <p>What are you waiting for? Log in now!</p>
+
+
+  <h1>About Our Team</h1>
+  <h2>Tiara Sykes</h2>
+  <ul>
+    <li>Summer Feelz: Excited, Adventurous, Relaxing</li>
+    <li>Aspirational Hobby: I would want to be a freelance makeup artist or work on music production</li>
+    <li>Ask me About: Social Justice (Acessibility to Quality Education)</li>
+  </ul>
+  <h2>Khanh Ngo</h2>
+  <ul>
+    <li>Summer Feelz: exciting, challenging, relaxing</li>
+    <li>Aspirational Hobby: travelling around the world</li>
+    <li>Ask me About: piano</li>
+  </ul>
+  <h2>Stephen Ankoue</h2>
+  <ul>
+    <li>Summer Feelz: Relaxed, Excited, Ready</li>
+    <li>Aspirational Hobby: I'd learn to play the guitar</li>
+    <li>Ask me About: Super Smash Bros.</li>
+  </ul>
+  <h2>Daniel Lee</h2>
+  <ul>
+    <li>Summer Feelz: Excited, Hopeful, Relieved</li>
+    <li>Aspirational Hobby: Voice acting! I love reading and narrating</li>
+    <li>Ask me About: Super Smash Bros. Ultimate</li>
+  </ul>
+  <h2>Alison Kao (PA) </h2>
+  <ul>
+    <li>Summer Feelz: it's too hot</li>
+    <li>Aspirational Hobby: flying a plane</li>
+    <li>Ask me About: why doge is such best very meme wow</li>
+  </ul>
+
+</body>
+
+
+
+
 </html>

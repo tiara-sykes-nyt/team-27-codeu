@@ -85,7 +85,11 @@ a {
   transition: all 300ms ease;
   color:  #F24236;
 }
-
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #claim-button {
   left: 100px;
   top: -220px;
