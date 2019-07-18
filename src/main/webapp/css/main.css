@@ -42,7 +42,7 @@ a {
 
 .redirect { 
   position: relative;
-  display: inline-block;
+  display: block;
   color: white;
   margin-left: 0px;
   background-color: #F24236;
@@ -52,13 +52,13 @@ a {
   text-align: center;
   padding-top: 0px;
   line-height: 50px;
-  top: 350px;
+  top: -170px;
   font-size: 14pt;
+  margin: auto;
   opacity: 0.9;
 }
 
 #page-body {
-  background-color: #efefef;
   height: 100%;
 }
 
@@ -67,24 +67,12 @@ a {
   display: block;
 }
 
-#mini-about p { 
-  border: 6px solid rgba(159, 228, 242, 0);
-  width: 91%;
-  display: inline-block;
-  color: white;
-  background-color: rgba(159, 228, 242, 0.6);
-  font-size: 40px;
-  font-size: 40px;
-  font-family: 'Segoe UI', Tahoma, Geneva,Verdana, sans-serif;
-}
 #mini-about { 
   position: relative;
-  text-align: center;
-  top: 200px;
 }
 
 #request-button { 
-  left: 200px;
+  left: -100px;
   transition: all 300ms ease;
 }
 
@@ -99,17 +87,46 @@ a {
 }
 
 #claim-button {
-  left: 600px;
+  left: 100px;
+  top: -220px;
   transition: all 300ms ease;
 }
 
 .svgClass{
-  height: 25px;
-  width: 25px;
+  height: 30px;
+  width: 30px;
   fill: #878787;
 }
 
 .svgClass:hover {   
   transition: all 300ms ease;
   fill:  #F24236;
+}
+
+.logoClass{
+  display: inline-block;
+  height: 175px;
+  width: 175px;
+  top: 100px;
+  margin-left: 30px;
+  position: relative;
+}
+
+.serviceWrapperClass {
+  background-color: #cde5fd;
+  height: 400px;
+}
+
+.wrapperTextClass {
+  display: block;
+  color: black;
+  font-size: 40px;
+  font-family: 'Segoe UI', Tahoma, Geneva,Verdana, sans-serif;
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 505px;
+  bottom: 45px;
 }
