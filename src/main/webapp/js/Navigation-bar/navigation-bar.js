@@ -60,7 +60,6 @@ class NavigationBar extends React.Component{
 </svg>
 </a>
 </li>
-        <li><a className="nav-link" href="/aboutus.html">About Our Team</a></li>
       </ul>
     </nav>
     );
