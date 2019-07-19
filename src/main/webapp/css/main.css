@@ -56,6 +56,7 @@ a {
   font-size: 14pt;
   margin: auto;
   opacity: 0.9;
+  font-family: 'Libre Franklin';
 }
 
 #page-body {
@@ -131,6 +132,29 @@ a {
   margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
-  width: 505px;
+  width: 520px;
   bottom: 45px;
+  font-family: 'Libre Franklin';
 }
+
+#mission { 
+  display: block;
+  position: absolute;
+  top: 65%;
+  text-align: center;
+  width: 760px;
+  left: 50%;
+  margin-left: -375px;
+}
+
+.projectName {
+  font-size: 25px;
+  font-family: 'Libre Franklin';
+  font-weight: bold;
+}
+
+.missionBody { 
+  font-family: 'Libre Franklin';
+  line-height: 30px;
+}
+
