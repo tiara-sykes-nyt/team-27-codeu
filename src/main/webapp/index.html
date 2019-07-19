@@ -22,18 +22,18 @@ limitations under the License.
   <meta charset="UTF-8">
   <link rel="stylesheet" href="/css/main.css">
   <script src="/js/navigation-loader.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
 </head>
 
 <body onload="addLoginOrLogoutLinkToNavigation();">
   <div id="navigation-bar"></div>
   <div id="page-body">
-    <div id="mini-about"><p>
-      Lend a Hand · Share a meal</p></div>
-      <div class="container">
-      <div class=link-wrapper>
+    <div id="mini-about"></div>
         <div class="redirect" id="request-button"></div>
         <div class="redirect" id="claim-button"></div>
-    </div>
+    <div id="long-about">
+      <div id="mission"></div>
+      <div id="about-team"></div>
     </div>
   </div>
     <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
@@ -42,5 +42,7 @@ limitations under the License.
     <script type="text/babel" src="js/Navigation-bar/navigation-bar.js"></script>
     <script type="text/babel" src="js/Request-Component/request-link.js"></script>
     <script type="text/babel" src="js/Claim-Component/index.js"></script>
+    <script type="text/babel" src="js/ServiceWrapper/index.js"></script>
+    <script type="text/babel" src="js/Mission/index.js"></script>
   </body>
 </html>
