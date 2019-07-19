@@ -51,11 +51,10 @@ String uploadUrl = blobstoreService.createUploadUrl("/messages"); %>
 }
         }
       </style>
-
+<link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
       </head>
       <body onload="addLoginOrLogoutLinkToNavigation(); buildUI(); createRestaurantMap();">
         <div id="navigation-bar"></div>
-        <h1 id="page-title">User Page</h1>
 
 
         <!-- Map-->
