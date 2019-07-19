@@ -21,10 +21,47 @@ String uploadUrl = blobstoreService.createUploadUrl("/messages"); %>
         <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
         <script type="text/babel" src="js/Navigation-bar/navigation-bar.js"></script>
 
+        <!-- Map Script-->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBk4eW11F6Tn08mUSJVZzBWQRvi5JdbxIo"></script>
+        <script>
+        function createRestaurantMap(){
+          fetch('/fast-food-restaurant-data').then(function(response) {
+            return response.json();
+          }).then((restaurantLocations) => {
+            const map = new google.maps.Map(document.getElementById('map'), {
+              center: {lat: 35.78613674, lng: -119.4491591},
+              zoom:7
+            });
+            restaurantLocations.forEach((restaurantLocation) => {
+              new google.maps.Marker({
+                position: {lat: restaurantLocation.lat, lng: restaurantLocation.lng},
+                map: map
+              });
+            });
+          });
+        }
+      </script>
+        <style>
+        #map{
+          width: 500px;
+          height: 500px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+}
+        }
+      </style>
+
       </head>
-      <body onload="addLoginOrLogoutLinkToNavigation(); buildUI();">
+      <body onload="addLoginOrLogoutLinkToNavigation(); buildUI(); createRestaurantMap();">
         <div id="navigation-bar"></div>
         <h1 id="page-title">User Page</h1>
+
+
+        <!-- Map-->
+        <p class = "centered">Restaurants Near Me</p>
+        <div id="map"></div>
+
 
           <!-- Messages-->
           <form id="message-form" action="<%= uploadUrl %>" method="POST" enctype="multipart/form-data">
