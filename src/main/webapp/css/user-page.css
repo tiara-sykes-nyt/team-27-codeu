@@ -33,6 +33,21 @@
   font-size: 19px;
   }
 
+  .nav-link:hover {
+    transition: all 300ms ease;
+    color:  #F24236;
+  }
+
+  .svgClass{
+    height: 30px;
+    width: 30px;
+    fill: #878787;
+  }
+  
+  .svgClass:hover {   
+    transition: all 300ms ease;
+    fill:  #F24236;
+  }
   
   h2 {
     margin: 0;
