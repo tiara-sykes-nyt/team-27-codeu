@@ -110,6 +110,10 @@
     margin-top: 0px;
   }
 
+  #map-wrapper {
+    background-color: #878787;
+  }
+
   .nav-link:hover {
     transition: all 300ms ease;
     color:  #F24236;

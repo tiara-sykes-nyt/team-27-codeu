@@ -58,8 +58,10 @@ String uploadUrl = blobstoreService.createUploadUrl("/messages"); %>
 
 
         <!-- Map-->
+        <div id="map-wrapper">
         <p class = "centered">Restaurants Near Me</p>
         <div id="map"></div>
+      </div>
 
 
           <!-- Messages-->
