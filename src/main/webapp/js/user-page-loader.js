@@ -24,10 +24,6 @@ if (!parameterUsername) {
 }
 
 /** Sets the page title based on the URL parameter username. */
-function setPageTitle() {
-  document.getElementById('page-title').innerText = parameterUsername;
-  document.title = parameterUsername + ' - User Page';
-}
 
 /**
 * Shows the message form if the user is logged in and viewing their own page.
@@ -97,26 +93,10 @@ function showMessageFormIfViewingSelf() {
       return messageDiv;
     }
 
-    /** Uses the fetch() function to request the user's about data, and then adds it to the page.  */
-    function fetchAboutMe(){
-      const url = '/about?user=' + parameterUsername;
-      fetch(url).then((response) => {
-        return response.text();
-      }).then((aboutMe) => {
-        const aboutMeContainer = document.getElementById('about-me-container');
-        if(aboutMe == ''){
-          aboutMe = 'This user has not entered any information yet.';
-        }
-
-        aboutMeContainer.innerHTML = aboutMe;
-
-      });
-    }
+    /** Uses the fetch() function to request the user's about data, and then adds it to the page.  *
 
     /** Fetches data and populates the UI of the page. */
     function buildUI() {
-      setPageTitle();
       showMessageFormIfViewingSelf();
       fetchMessages();
-      fetchAboutMe();
     }
