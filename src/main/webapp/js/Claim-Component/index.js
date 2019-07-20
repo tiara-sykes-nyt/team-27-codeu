@@ -8,23 +8,29 @@ class ClaimLink extends React.Component {
 
     this.state = {
       hits: '',
+      isLoading: false,
     }
   }
 
   componentDidMount() {
+    this.setState({ isLoading: true })
     fetch('/login-status')
       .then(response => response.json())
       .then((loginStatus) => {
         if (loginStatus.isLoggedIn) {
-          this.setState({ hits: '/feed.html'}, () => {console.log("state updated:", this.state.hits)});
+          this.setState({ hits: '/feed.html', isLoading: false });
         }
         else {
-          this.setState({ hits: '/login'});
+          this.setState({ hits: '/login', isLoading: false });
         }
       })   
   }
   
   render() {
+    if(this.state.isLoading)
+    {
+      return <p> </p>;
+    }
     return(
     <a href={this.state.hits}>Claim Requests</a>);
   }

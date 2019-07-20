@@ -3,7 +3,45 @@
 const e = React.createElement;
 
 class NavigationBar extends React.Component{
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      hits: '',
+      isLoading: false,
+    }
+  }
+
+  componentDidMount() {
+    this.setState({ isLoading: true});
+    fetch('/login-status')
+      .then((response) => {
+        return response.json();
+      })
+      .then((loginStatus) => {
+        if (loginStatus.isLoggedIn) {
+            this.setState({ hits: '/logout', isLoading: false });
+          }
+        else {
+          this.setState({ hits: '/login', isLoading: false});
+        }
+      });
+  }
+
+  handleLabel() {
+    if(this.state.hits === "/login")
+    {
+      return "Login";
+    }
+
+    return "Logout";
+  }
   render() {
+
+    if (this.state.isLoading) {
+      return <p> </p>;
+    }
+    
     return (
       <nav>
       <ul id="navigation">
@@ -59,6 +97,11 @@ class NavigationBar extends React.Component{
 </g>
 </svg>
 </a>
+</li>
+
+<li>
+  <a href={this.state.hits}>{this.handleLabel()}
+  </a>
 </li>
       </ul>
     </nav>

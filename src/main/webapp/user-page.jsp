@@ -48,8 +48,7 @@ String uploadUrl = blobstoreService.createUploadUrl("/messages"); %>
           display: block;
           margin-left: auto;
           margin-right: auto;
-}
-        }
+}  
       </style>
 <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
       </head>
