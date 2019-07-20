@@ -41,7 +41,7 @@ String uploadUrl = blobstoreService.createUploadUrl("/messages"); %>
           });
         }
       </script>
-        <style>
+        <style class = "rounded">
         #map{
           width: 500px;
           height: 500px;
@@ -56,9 +56,10 @@ String uploadUrl = blobstoreService.createUploadUrl("/messages"); %>
       <body onload="addLoginOrLogoutLinkToNavigation(); buildUI(); createRestaurantMap();">
         <div id="navigation-bar"></div>
 
-
+<h1 class = "centered">Request Food</h1>
         <!-- Map-->
         <div id="map-wrapper">
+
         <p class = "centered">Restaurants Near Me</p>
         <div id="map"></div>
       </div>
@@ -66,13 +67,13 @@ String uploadUrl = blobstoreService.createUploadUrl("/messages"); %>
 
           <!-- Messages-->
           <form id="message-form" action="<%= uploadUrl %>" method="POST" enctype="multipart/form-data">
-          <p>Enter a new message:</p>
+          <p>Make a request:</p>
           <br/>
-          <textarea name="text" placeholder="What's on your mind?" id="message-input"></textarea>
+          <textarea name="text" placeholder="What would you like? From where?" id="message-input"></textarea>
           <p>Upload an image (optional):</p>
           <input type="file" name="image">
             <br/><br/>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" class = "rounded">
             </form>
 
             <div id="message-container">Loading...</div>
