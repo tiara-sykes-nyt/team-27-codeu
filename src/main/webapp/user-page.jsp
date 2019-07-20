@@ -55,8 +55,6 @@ String uploadUrl = blobstoreService.createUploadUrl("/messages"); %>
       </head>
       <body onload="addLoginOrLogoutLinkToNavigation(); buildUI(); createRestaurantMap();">
         <div id="navigation-bar"></div>
-        <h1 id="page-title">User Page</h1>
-
 
         <!-- Map-->
         <p class = "centered">Restaurants Near Me</p>
