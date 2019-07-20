@@ -23,7 +23,6 @@ if (!parameterUsername) {
   window.location.replace('/');
 }
 
-/** Sets the page title based on the URL parameter username. */
 
 /**
 * Shows the message form if the user is logged in and viewing their own page.
