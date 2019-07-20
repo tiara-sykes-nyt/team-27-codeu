@@ -8,6 +8,7 @@ class RequestLink extends React.Component {
 
     this.state = {
       hits: '',
+      isLoading: false,
     }
   }
  
@@ -22,19 +23,24 @@ class RequestLink extends React.Component {
   }
 
   componentDidMount() {
+    this.setState({ isLoading: true })
     fetch('/login-status')
       .then(response => response.json())
       .then((loginStatus) => {
         if (loginStatus.isLoggedIn) {
-          this.setState({ hits: createLink('/user-page.jsp?user=' + loginStatus.username)}, () => {console.log("state updated:", this.state.hits)});
+          this.setState({ hits: createLink('/user-page.jsp?user=' + loginStatus.username), isLoading: false});
         }
         else {
-          this.setState({ hits: '/login'});
+          this.setState({ hits: '/login', isLoading: false });
         }
       })   
   }
 
   render() {
+    if(this.state.isLoading)
+    {
+      return <p> </p>;
+    }
     return(
     <a href={this.state.hits}>Request Service</a>);
   }
