@@ -53,20 +53,24 @@ String uploadUrl = blobstoreService.createUploadUrl("/messages"); %>
       </style>
   <link href="https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap" rel="stylesheet">
       </head>
-      <body onload="addLoginOrLogoutLinkToNavigation(); buildUI(); createRestaurantMap();">
+      <body onload="buildUI(); createRestaurantMap();">
         <div id="navigation-bar"></div>
 
         <!-- Map-->
-        <p class = "centered">Restaurants Near Me</p>
+        <div id="map-wrapper">
+        <p id = "map-description">Restaurants Near Me</p>
         <div id="map"></div>
+      </div>
 
 
           <!-- Messages-->
           <form id="message-form" action="<%= uploadUrl %>" method="POST" enctype="multipart/form-data">
-          <p>Enter a new message:</p>
+          <p style="margin-bottom: 0px;
+          margin-top: 0px;
+          font-family: Libre Franklin;">Place an Order:</p>
           <br/>
-          <textarea name="text" placeholder="What's on your mind?" id="message-input"></textarea>
-          <p>Upload an image (optional):</p>
+          <textarea name="text" placeholder="What do you want to eat?" id="message-input"></textarea>
+          <p style="font-family: Libre Franklin;">Upload an image (optional):</p>
           <input type="file" name="image">
             <br/><br/>
             <input type="submit" value="Submit">
